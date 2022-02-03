@@ -28,8 +28,7 @@ public class MarkdownParse {
             }
             String link = markdown.substring(openParen + 1, closeParen);
             Matcher m = p.matcher(link);
-            if(nextOpenBracket>0 && !markdown.substring(nextOpenBracket -1 , nextOpenBracket).contains("!") && m.matches()){
-                
+            if(nextOpenBracket>0 && !markdown.substring(nextOpenBracket -1 , nextOpenBracket).contains("!") && m.matches()){ 
                 toReturn.add(link);
             }
             currentIndex = closeParen + 1;
